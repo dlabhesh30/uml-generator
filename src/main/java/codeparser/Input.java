@@ -37,7 +37,7 @@ public class Input {
 	for(CompilationUnit cus:cuSet)
 		generateParse(cus);	
 	}
-	//code to accept files
+	
 	public static void getFiles(File f)
 	{
 	   File files[];
