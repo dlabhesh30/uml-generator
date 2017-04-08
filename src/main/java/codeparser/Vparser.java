@@ -27,6 +27,13 @@ public class Vparser {
 	        GenerateDiagram.generatePNG(yumlCode, outPath);
 	    }
 
+	    private String yumlCodeUniquer(String code) {
+	        String[] codeLines = code.split(",");
+	        String[] uniqueCodeLines = new LinkedHashSet<String>(
+	                Arrays.asList(codeLines)).toArray(new String[0]);
+	        String result = String.join(",", uniqueCodeLines);
+	        return result;
+	    }
 
 	    private String parseAdditions() {
 	        String result = "";
