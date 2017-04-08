@@ -35,6 +35,24 @@ public class Vparser {
 	        return result;
 	    }
 
+	    private String parseAdditions() {
+	        String result = "";
+	        Set<String> keys = mapClassConn.keySet(); // get all keys
+	        for (String i : keys) {
+	            String[] classes = i.split("-");
+	            if (map.get(classes[0]))
+	                result += "[<<interface>>;" + classes[0] + "]";
+	            else
+	                result += "[" + classes[0] + "]";
+	            result += mapClassConn.get(i); // Add connection
+	            if (map.get(classes[1]))
+	                result += "[<<interface>>;" + classes[1] + "]";
+	            else
+	                result += "[" + classes[1] + "]";
+	            result += ",";
+	        }
+	        return result;
+	    }
 
 	    private String parser(CompilationUnit cu) {
 	        String result = "";
