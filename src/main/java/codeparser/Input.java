@@ -74,7 +74,7 @@ public class Input {
 		int numberOfClasses=cu.getTypes().size();
 		for(int i=0;i<numberOfClasses;i++){
 		Node node=cu.getTypes().get(i);	        
-	    //checking if the present node is a class or an interface
+	    
 	    ClassOrInterfaceDeclaration coit= (ClassOrInterfaceDeclaration)node;	    
 	    if(coit.isInterface())
 	    	System.out.println(coit.getName()+" is interface");
