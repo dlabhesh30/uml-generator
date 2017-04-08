@@ -67,7 +67,13 @@ public class Vparser {
 	        Node node = ltd.get(0); // assuming no nested classes
 
 	        // Get className
-	       me += coi.getName();
+	        ClassOrInterfaceDeclaration coi = (ClassOrInterfaceDeclaration) node;
+	        if (coi.isInterface()) {
+	            className = "[" + "<<interface>>;";
+	        } else {
+	            className = "[";
+	        }
+	        className += coi.getName();
 	        classShortName = coi.getName();
 
 	        // Parsing Methods
