@@ -8,13 +8,6 @@ public class Vparser {
 	    String yumlCode;
 	    ArrayList<CompilationUnit> cuArray;
 
-	    ParseEngine(String inPath, String outFile) {
-	        this.inPath = inPath;
-	        this.outPath = inPath + "\\" + outFile + ".png";
-	        map = new HashMap<String, Boolean>();
-	        mapClassConn = new HashMap<String, String>();
-	        yumlCode = "";
-	    }
 
 	    public void start() throws Exception {
 	        cuArray = getCuArray(inPath);
