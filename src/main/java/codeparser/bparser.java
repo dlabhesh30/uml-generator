@@ -5,15 +5,7 @@ public class bparser {
         if (bd instanceof MethodDeclaration) {
             MethodDeclaration md = ((MethodDeclaration) bd);
             // Get only public methods
-            if (md.getDeclarationAsString().startsWith("public")
-                    && !coi.isInterface()) {
-                // Identify Setters and Getters
-                if (md.getName().startsWith("set")
-                        || md.getName().startsWith("get")) {
-                    String varName = md.getName().substring(3);
-                    makeFieldPublic.add(varName.toLowerCase());
-                } else {
-                    if (nextParam)
+          
                         methods += ";";
                     methods += "+ " + md.getName() + "(";
                     for (Object gcn : md.getChildrenNodes()) {
