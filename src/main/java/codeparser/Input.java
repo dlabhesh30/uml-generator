@@ -25,7 +25,7 @@ import com.github.javaparser.ast.body.TypeDeclaration;
 import com.github.javaparser.ast.body.VariableDeclarator;
 import com.github.javaparser.ast.expr.VariableDeclarationExpr;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
-//this is a input class
+//
 public class Input {
 	private static List<CompilationUnit> cuSet=new ArrayList<CompilationUnit>();
 	public static void main (String[] args){
