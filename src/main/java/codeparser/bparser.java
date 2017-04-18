@@ -5,14 +5,7 @@ public class bparser {
         if (bd instanceof MethodDeclaration) {
             MethodDeclaration md = ((MethodDeclaration) bd);
             // Get only public methods
-          
-                        methods += ";";
-                    methods += "+ " + md.getName() + "(";
-                    for (Object gcn : md.getChildrenNodes()) {
-                        if (gcn instanceof Parameter) {
-                            Parameter paramCast = (Parameter) gcn;
-                            String paramClass = paramCast.getType()
-                                    .toString();
+          toString();
                             String paramName = paramCast.getChildrenNodes()
                                     .get(0).toString();
                             methods += paramName + " : " + paramClass;

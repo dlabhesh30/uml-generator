@@ -1,13 +1,7 @@
 /**
   @startuml
-  a <|-- b
-  c *-- d
-  e o-- f
- e o-- f
- e o-- f
- e o-- f
- e o-- f
- e o-- f
+ a --|>b
+  
   @enduml
   
  */
