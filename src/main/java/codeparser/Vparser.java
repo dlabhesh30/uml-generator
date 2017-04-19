@@ -48,8 +48,7 @@ public class Vparser {
 	            if (map.get(classes[1]))
 	                result += "[<<interface>>;" + classes[1] + "]";
 	            else
-	                result += "[" + classes[1] + "]";
-	            result += ",";
+	               
 	        }
 	        return result;
 	    }
