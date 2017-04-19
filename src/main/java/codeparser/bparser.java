@@ -12,16 +12,7 @@ public class bparser {
                             if (map.containsKey(paramClass)
                                     && !map.get(classShortName)) {
                                 additions += "[" + classShortName
-                                        + "] uses -.->";
-                                if (map.get(paramClass))
-                                    additions += "[<<interface>>;"
-                                            + paramClass + "]";
-                                else
-                                    additions += "[" + paramClass + "]";
-                            }
-                            additions += ",";
-                        } else {
-                            String methodBody[] = gcn.toString().split(" ");
+            y[] = gcn.toString().split(" ");
                             for (String foo : methodBody) {
                                 if (map.containsKey(foo)
                                         && !map.get(classShortName)) {
