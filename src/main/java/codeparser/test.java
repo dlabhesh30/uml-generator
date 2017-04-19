@@ -23,6 +23,15 @@ public class test {
     /**
      * Simple visitor implementation for visiting MethodDeclaration nodes.
      */
-  
+    private static class MethodChangerVisitor extends VoidVisitorAdapter<Void> {
+        @Override
+        public void visit(MethodDeclaration n, Void arg) {
+            // change the name of the method to upper case
+            n.setName(n.getNameAsString().toUpperCase());
+
+            // add a new parameter to the method
+            n.addParameter("int", "value");
+        }
+    }
    
 }
