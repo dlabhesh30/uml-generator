@@ -11,9 +11,7 @@ public class Vparser {
 	    ParseEngine(String inPath, String outFile) {
 	        this.inPath = inPath;
 	        this.outPath = inPath + "\\" + outFile + ".png";
-	        map = new HashMap<String, Boolean>();
-	        mapClassConn = new HashMap<String, String>();
-	        yumlCode = "";
+	     
 	    }
 
 	    public void start() throws Exception {
