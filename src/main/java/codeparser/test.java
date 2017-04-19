@@ -16,8 +16,6 @@ public class test {
         // visit and change the methods names and parameters
         new MethodChangerVisitor().visit(cu, null);
 
-        // prints the changed compilation unit
-        System.out.println(cu);
     }
 
     /**
