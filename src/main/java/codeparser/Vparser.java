@@ -17,7 +17,7 @@ public class Vparser {
 	    }
 
 	    public void start() throws Exception {
-	        
+	        cuArray = getCuArray(inPath);
 	        buildMap(cuArray);
 	        for (CompilationUnit cu : cuArray)
 	            yumlCode += parser(cu);
