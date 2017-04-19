@@ -5,7 +5,7 @@ public class Vparser {
 	    final String outPath;
 	    HashMap<String, Boolean> map;
 	    HashMap<String, String> mapClassConn;
-	    
+	    String yumlCode;
 	    ArrayList<CompilationUnit> cuArray;
 
 	    ParseEngine(String inPath, String outFile) {
