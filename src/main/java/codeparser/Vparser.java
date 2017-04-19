@@ -24,7 +24,7 @@ public class Vparser {
 	        yumlCode += parseAdditions();
 	        yumlCode = yumlCodeUniquer(yumlCode);
 	        System.out.println("Unique Code: " + yumlCode);
-	        GenerateDiagram.generatePNG(yumlCode, outPath);
+	        
 	    }
 
 	    private String yumlCodeUniquer(String code) {
