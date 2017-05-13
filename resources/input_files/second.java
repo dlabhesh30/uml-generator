@@ -77,7 +77,7 @@ public static void generateParse(CompilationUnit cu){
 	     */
 private static class MethodVisitor extends VoidVisitorAdapter<Void> {
 	        @Override
-	        public void visit(MethodDeclaration n, Void arg) {
+	        public void visit(MethodDeclaration n, int arg) {
 	            /* here you can access the attributes of the method.
 	             this method will be called for all methods in this 
 	             CompilationUnit, including inner class methods */

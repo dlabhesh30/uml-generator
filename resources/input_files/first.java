@@ -12,7 +12,7 @@ import java.util.List;
 
 
 
-public class first {
+public class first extends second{
 
 		private static List<String> fileSet=new ArrayList<String>();
 		//temp variables 

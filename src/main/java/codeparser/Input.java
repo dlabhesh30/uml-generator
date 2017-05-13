@@ -29,13 +29,13 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class Input {
 	private static List<CompilationUnit> cuSet=new ArrayList<CompilationUnit>();
 	public static void main (String[] args){
-	File mainFolder = new File("resources\\input_files");
-	long length = 0L;
-	length=mainFolder.length();
-	System.out.println("size "+length/(1024*1024));
-	getFiles(mainFolder);	
-	for(CompilationUnit cus:cuSet)
-		generateParse(cus);	
+		File mainFolder = new File("resources\\input_files");
+		long length = 0L;
+		length=mainFolder.length();
+		System.out.println("size "+length/(1024*1024));
+		getFiles(mainFolder);	
+		for(CompilationUnit cus:cuSet)
+			generateParse(cus);	
 	}
 	
 	public static void getFiles(File f)
@@ -120,34 +120,32 @@ public class Input {
 		       parseClassOrInterface(cu);
 		       new MethodVisitor().visit(cu, null);		
 	   
-		    }
+    }
 		        
 	
-		    /**
-		     * Simple visitor implementation for visiting MethodDeclaration nodes.
-		     */
-		    private static class MethodVisitor extends VoidVisitorAdapter<Void> {
-		        @Override
-		        public void visit(MethodDeclaration n, Void arg) {
-		        	String method="";
-		                      
-		            super.visit(n, arg);
-		            if (n.getDeclarationAsString().startsWith("public")
-		            		||n.getDeclarationAsString().startsWith("private")){
-		            method += "+ " + n.getName() + "(";
-	                for (Object gcn : n.getChildNodes()) {                	
-	                	if (gcn instanceof Parameter) {             
-	                        Parameter paramCast = (Parameter) gcn;
-	                        String paramClass = paramCast.getType().toString();
-	                        String paramName = paramCast.getChildNodes()
-	                                .get(0).toString();
-	                        method += paramName + " : " + paramClass;	                            
-	                    }
-	                }
-	                method+=")";
-	                System.out.println(method);
-		            }
-		        }
+    /**
+	 * Simple visitor implementation for visiting MethodDeclaration nodes.
+     */
+    private static class MethodVisitor extends VoidVisitorAdapter<Void> {
+	    @Override
+	    public void visit(MethodDeclaration n, Void arg) {
+	  	String method="";
+	    super.visit(n, arg);
+	    if (n.getDeclarationAsString().startsWith("public")||n.getDeclarationAsString().startsWith("private")){
+	    	method += "+ " + n.getName() + "(";
+		    for (Object gcn : n.getChildNodes()) {                	
+		      	if (gcn instanceof Parameter) {             
+		      		
+	                Parameter paramCast = (Parameter) gcn;
+	                String paramClass = paramCast.getType().toString();
+	                String paramName = paramCast.getChildNodes().get(0).toString();
+		            method += paramName + " : " + paramClass;	                            
+		        }		      	
+	        }
+		    method+=")";
+		    System.out.println(method);
+	    }
+    }
 		       /* @Override
 		        public void visit(VariableDeclarationExpr n, Void arg) {
 		        	
