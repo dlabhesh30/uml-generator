@@ -12,8 +12,7 @@ To execute use the following commands :
       
          java -jar uml-parser.jar class "C:\Path to the folder where files are located" image_name
       
-         This will generate the class diagram in the input folder where your java files are present.
-      
+         This will generate the class diagram in the input folder where your java files are present.      
       2. For Sequence diagram: 
          This program generates a sequence diagram from the given input java class file. Unlike the class diagram             generation            the program expects two additional parameters namely, the class name and the function name inside the given class                          name from where the sequence diagram should start.
           To generate a sequence diagram use the following command,
